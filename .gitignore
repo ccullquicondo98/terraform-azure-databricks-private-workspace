@@ -1,29 +1,33 @@
+#################################################
 # Terraform
+
 .terraform/
+.terraform.lock.hcl
 *.tfstate
 *.tfstate.*
 crash.log
-crash.*.log
-
-# Variables sensibles
-*.tfvars
-!terraform/environments/dev/terraform.tfvars.example
-
-# Plans
-*.tfplan
-
-# Overrides
 override.tf
 override.tf.json
+*_override.tf
+*_override.tf.json
 
-# CLI configuration files
-.terraformrc
-terraform.rc
+#################################################
+# Variables
 
-# IDE
+*.tfvars
+!environments/**/terraform.tfvars.example
+
+#################################################
+# VS Code
+
 .vscode/
+
+#################################################
+# IntelliJ
+
 .idea/
 
-# OS
+#################################################
+# Linux
+
 .DS_Store
-Thumbs.db
