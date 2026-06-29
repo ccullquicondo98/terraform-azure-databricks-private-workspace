@@ -52,7 +52,7 @@ resource "azurerm_private_endpoint" "workspace_ui" {
 
 resource "azurerm_private_endpoint" "workspace_browser_auth" {
   depends_on = [
-    azurerm_databricks_workspace.workspace
+    azurerm_private_endpoint.workspace_ui
   ]
   name                = "pep-databricks-browser_auth"
   location            = var.location

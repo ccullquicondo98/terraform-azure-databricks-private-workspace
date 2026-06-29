@@ -1,0 +1,34 @@
+subscription_id = "<azure-subscription-id>"
+project_name = "terraform-azure-databricks-private-workspace"
+environment = "dev"
+location = "eastus2"
+
+resource_group_name = "rg-dbk-dev"
+
+vnet_name = "vnet-dbk-dev"
+address_space = [
+  "10.0.0.0/16"
+]
+
+public_subnet_name = "snet-dbk-public"
+public_subnet_prefix = [
+  "10.0.1.0/24"
+]
+
+private_subnet_name = "snet-dbk-private"
+private_subnet_prefix = [
+  "10.0.2.0/24"
+]
+
+private_endpoint_subnet_name = "snet-private-endpoints"
+private_endpoint_subnet_prefix = [
+  "10.0.3.0/24"
+]
+
+nsg_name = "nsg-dbk-dev"
+
+workspace_name = "adb-dbk-dev"
+managed_resource_group_name = "rg-dbk-managed-dev"
+workspace_sku = "premium"
+
+private_dns_zone_name = "privatelink.azuredatabricks.net"
